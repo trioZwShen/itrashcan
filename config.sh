@@ -1,5 +1,5 @@
 # set alias
 alias rm="$itrashcan/delete.sh"
-# rc=""
+alias rc="$itrashcan/clear.sh"
 # re=""
 alias gor="cd $itrashcan_home"
