@@ -69,23 +69,24 @@ fi
 
 # rename
 now=`date +%Y-%m-%d_%H_%M_%S`
-filename="${file##*/}" 	# get file name
-newfilename="${file##*/}_${now}"
+filename=`basename $file` 	# get file name
+newfilename="${filename}_${now}"
 
 # get full path
-fullpath=`pwd $file`"/$file"
+basepath=$(cd `dirname $file`; pwd)
+fullpath="${basepath}/${filename}"
 
 # mv to trashcan
-if mv -f "$file" "$itrashcan_home/trash/$newfilename"
+if mv -f "$fullpath" "$itrashcan_home/trash/$newfilename"
 then
     # log
-    echo "$file is move to trashcan"
+    echo "$fullpath is move to trashcan"
 else
     echo "fail"
 fi
 
 # file is not exist
 else
-    echo "$file is not exist"
+    echo "$fullpath is not exist"
 fi
 done
