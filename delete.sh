@@ -88,6 +88,6 @@ fi
 
 # file is not exist
 else
-    echo "$fullpath is not exist"
+    echo "$file is not exist"
 fi
 done
