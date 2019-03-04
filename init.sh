@@ -19,7 +19,7 @@ fi
 # create trash can
 mkdir $itrashcan_home
 mkdir $itrashcan_home"/trash"
-mkdir $itrashcan_home"/trash_log"
+touch $itrashcan_home"/trash.log"
 
 # init permissions
 chmod 777 -R $itrashcan_home

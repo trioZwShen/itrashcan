@@ -5,7 +5,7 @@ read ask
 if [ $ask = 'y' -o $ask = 'Y' ]
 then
     `rm -rf $itrashcan_home/trash/*`
-    `rm -rf $itrashcan_home/trash_log/*`
+    `rm -rf $itrashcan_home/trash.log`
     echo "Clean!"
 fi
 

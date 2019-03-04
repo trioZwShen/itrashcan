@@ -58,17 +58,18 @@ then
 if [ -f "$file" ] && [ `ls -l $file|awk ' {print $5}'` -gt 2147483648 ]
 then
     echo "$file size is lager than 2G, will be deleted directly"
-    `rm -rf $file`
+    rm -rf $file
 fi
 
 if [ -d "$file" ] && [ `du -sb $file|awk '{ print $1}'` -gt 2147483648 ]
 then
     echo "The directory: $file size is lager than 2G, will be deleted directly"
-    `rm -rf $file`
+    rm -rf $file
 fi
 
 # rename
 now=`date +%Y-%m-%d_%H_%M_%S`
+nowdate=`date +%Y-%m-%d`
 filename=`basename $file` 	# get file name
 newfilename="${filename}_${now}"
 
@@ -79,7 +80,7 @@ fullpath="${basepath}/${filename}"
 # mv to trashcan
 if mv -f "$fullpath" "$itrashcan_home/trash/$newfilename"
 then
-    # log
+    bash $itrashcan/log.sh $newfilename $filename $now $fullpath $nowdate
     echo "$fullpath is move to trashcan"
 else
     echo "fail"
