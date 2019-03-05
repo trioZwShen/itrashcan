@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if [ $# -eq 0 ]; then
     echo "Please enther the target what your want to restore!";
     exit;

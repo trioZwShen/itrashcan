@@ -1,10 +1,9 @@
 # set alias
-
-## rm by itrashcan
+# rm by itrashcan
 alias rm="$itrashcan/delete.sh" 
 # clear the trashcan
 alias rc="$itrashcan/clear.sh"	
-# restore the file
+# restore the target
 alias re="$itrashcan/restore.sh"
 # go to the trashcan
 alias gor="cd $itrashcan_home/trash"

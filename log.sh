@@ -1,5 +1,4 @@
 #!/bin/bash
-
 log="${itrashcan_home}/trash.log"
 # create if log does not exist
 if [ ! -d $log  ]; then
