@@ -5,6 +5,5 @@ if [ $ask = 'y' -o $ask = 'Y' ]
 then
     `rm -rf $itrashcan_home/trash/*`
     `rm -rf $itrashcan_home/trash.log`
-    echo "Clean!"
+    echo "Done!"
 fi
-

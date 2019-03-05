@@ -1,7 +1,5 @@
 #!/bin/bash
-
 # run this script for init your environment 
-# set -x
 set -e
 
 # check the $itrashcan_home.
