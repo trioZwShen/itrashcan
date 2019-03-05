@@ -87,3 +87,8 @@ do
         echo "$file is not exist"
     fi
 done
+
+# trashcan size > 10G remider user
+if [ `du -sb "${itrashcan_home}"/trash|awk '{print $1}'` -gt 5368709120 ]; then
+    echo "Warning: trashcan's size[`du -sh "${itrashcan_home}/trash"|awk '{print $1}'`] is biger than 5G."
+fi
