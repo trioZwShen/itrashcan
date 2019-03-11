@@ -18,34 +18,34 @@ fi
 while getopts "dfiPRrvw" opt
 do
     case $opt in
-    f)
-        echo "real rm done"
-        exec $realrm "$@"
-        ;;
-    d)
-        # do nothing
-        ;;
-    i)
-        # do nothing
-        ;;
-    P)
-        # do nothing
-        ;;
-    R)
-        # do nothing
-        ;;
-    r)
-        # do nothing
-        ;;
-    v)
-        # do nothing
-        ;;
-    w)
-        # do nothing
-        ;;
-    ?) 	# unknow argument
-        exit
-        ;;
+        f)
+            echo "real rm done"
+            exec $realrm "$@"
+            ;;
+        d)
+            # do nothing
+            ;;
+        i)
+            # do nothing
+            ;;
+        P)
+            # do nothing
+            ;;
+        R)
+            # do nothing
+            ;;
+        r)
+            # do nothing
+            ;;
+        v)
+            # do nothing
+            ;;
+        w)
+            # do nothing
+            ;;
+        ?) 	# unknow argument
+            exit
+            ;;
     esac
 done
 
