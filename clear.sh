@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Are you sure you want to permanently erase the items in the Trash?[Y/n]"
+echo "Are you sure you want to permanently erase the items in the trashcan?[Y/n]"
 read ask
 if [ $ask = 'y' -o $ask = 'Y' ]
 then
